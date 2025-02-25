@@ -20,7 +20,7 @@ export default function JoinWhatsAppModal({
 }) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-30" onClose={onClose}>
+      <Dialog as="div" className="relative z-[70]" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

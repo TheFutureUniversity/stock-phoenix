@@ -42,7 +42,7 @@ function PageComponent({ masterclass }: { masterclass: any }) {
               <span className="text-[#2F76FF]">STOP LOSS AND EXIT</span>
             </div>
           </div>
-          <div className="flex flex-col items-center h-auto">
+          <div className="flex flex-col items-center h-auto mb-5">
             <div className="flex w-[70vw]">
               <Image
                 src={"/teacher.webp"}
@@ -58,7 +58,7 @@ function PageComponent({ masterclass }: { masterclass: any }) {
             <LeadForm
               masterClass={masterclass}
               customPage={true}
-              className="z-50 "
+              className="z-50 px-5 bg-white/10 rounded-xl py-2"
               //    buttonStyle="!bg-black py-3 px-4 !text-white md:text-lg text-sm rounded-lg hover:scale-105 !self-center"
               buttonStyle="!bg-[#2F76FF] md:mt-3 mt-1 btn-block hover:scale-105  p-3 text-white font-semibold text-xl rounded-md"
               inputStyle="md:!py-3 !p-3 w-full rounded-md bg-gray-500/10"
