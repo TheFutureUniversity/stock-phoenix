@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-"use client"
+"use client";
 import z from "zod";
 import axios from "axios";
 import dayjs from "dayjs";
@@ -73,12 +73,12 @@ export default function LeadForm({
   const [showJoiningPopup, setShowJoiningPopup] = useState(false);
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
-  
+
   const activeSlot = masterClass?.slots?.find((slot: any) => {
     return slot.active == true;
   });
-  const params = useParams(); 
-  const searchParams = useSearchParams(); 
+  const params = useParams();
+  const searchParams = useSearchParams();
 
   const isTaboola = searchParams.get("source") === "Taboola";
   const source = searchParams.get("source") || "direct";
@@ -101,7 +101,6 @@ export default function LeadForm({
   const name = watch("name");
   const email = watch("email");
   const phone = watch("phone");
-
 
   const sendPartialData = useCallback(
     debounce((data: any) => {
@@ -185,7 +184,7 @@ export default function LeadForm({
         phone,
         name,
         source: source || "direct",
-        comment: comment || "",
+        comment: comment + "_stock-phoenix" || "",
         masterclassSlotId: slotInfo.id,
         masterclassId: masterClass.id,
         payload: {
@@ -228,13 +227,13 @@ export default function LeadForm({
 
         //@ts-ignore
         gtag("event", "contactFormSubmitted", tagPayload);
-        
+
         if (isPartialLead && partialData.id && partialData.id !== "") {
           axios.delete(
             `${process.env.NEXT_PUBLIC_BASE_API}leads/partial-lead/${partialData.id}`
           );
         }
-        
+
         reset();
         setShowJoiningPopup(true);
         if (exportToExcel) {
@@ -250,7 +249,7 @@ export default function LeadForm({
       });
   };
 
-  const isMGID = (source == "MGID");
+  const isMGID = source == "MGID";
 
   return (
     <div className={`${className} relative !z-[60]`}>
