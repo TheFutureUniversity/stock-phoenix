@@ -150,7 +150,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
   return (
     <>
       <Head>
-        <title>{pageData?.head?.title ?? "Stock Market Trading"}</title>
+        <title>{ "Stock Phoenix"}</title>
         <meta
           name={pageData?.head?.meta.name}
           content={pageData?.head?.meta.content}
