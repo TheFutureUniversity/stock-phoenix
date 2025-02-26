@@ -550,23 +550,6 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
           </div>
         </div>
 
-        <div className="flex justify-center items-center px-56 max-xl:px-20 max-lg:px-10 py-10 flex-col gap-10">
-          <div>
-            <h2 className="max-md:text-lg text-center">
-              Valuable Certificate upon completion of the Masterclass!
-            </h2>
-          </div>
-
-          <img src={`/prabhu-swing/certificate.webp`} width={500}></img>
-          {/* Enroll now*/}
-          <button
-            className="bg-[#2563EB] border-none !text-white py-5 w-[720px] max-lg:w-80 text-lg rounded-lg"
-            onClick={() => handleEnrollNowFormOpen("paid_video_certificate")}
-          >
-            Reserve Seat For FREE
-          </button>
-        </div>
-
         <div className="md:px-10 px-5">
           <h2 className="max-md:text-lg text-center  md:mt-10 mt-5">
             Frequently Asked Questions
