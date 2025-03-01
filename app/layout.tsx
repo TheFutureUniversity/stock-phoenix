@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import {GoogleAnalytics} from "nextjs-google-analytics-gtm"
+import { GoogleAnalytics } from "nextjs-google-analytics-gtm";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,22 +17,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <GoogleAnalytics/>
+        <GoogleAnalytics />
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-R0QPWVG6LX"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-418516168"
         ></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-            gtag('config', 'G-R0QPWVG6LX');
-          `,
+  gtag('config', 'AW-418516168');`,
           }}
         ></script>
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `
