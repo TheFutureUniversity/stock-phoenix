@@ -27,7 +27,7 @@ const pageData = {
   language: "English",
   mcDuration: "2 Hours",
   Heading:
-    '<b class=" text-[#2563EB] font-normal">10x Your Capital: </b>Swing Trading Masterclass with Prabhu Selvaraj',
+    '<b class=" text-[#2563EB] font-normal">Grow Your Capital: </b>Swing Trading Masterclass with Prabhu Selvaraj',
   HeadingPara:
     "Transform Your Trading Strategy with Prabhu Selvaraj's Swing Trading Workshop.",
   teacherName: "Prabhu Selvaraj",
@@ -35,12 +35,12 @@ const pageData = {
     loHeading:
       "Learn important skills & knowledge to Improve your trading expertise.",
     loList: [
-      "Exploring the advantages of swing trading over other trading styles",
-      "What and Why of Swing Trading",
-      "Advantages of Swing Trading",
-      "How to generate Consistent Return using Swing Trading.",
-      "One Powerful swing trading strategy",
-      "How much profits can be made using Swing Trading Strategy",
+      "Trade in Equities for Passive Income",
+      " Proven Short Term Trading Strategy ",
+      "Examples for the last 3 Years",
+      "Life Time Free Scanner",
+      "Learn Entry, StopLoss and Exit",
+      "Effective Money Management & Risk Management",
     ],
   },
   meetYourMentor: {
@@ -121,9 +121,10 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
       landing_page: "paid-video",
       masterclass: masterclass?.title,
       masterClassId: masterclass?.id,
-      platform: "tradewise",
+      platform: "stock-phoenix",
       segment: segment,
     });
+    console.log(mixpanel);
     setIsEnrollNowFormOpen(true);
   };
 
@@ -150,33 +151,14 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
   return (
     <>
       <Head>
-        <title>{ "Stock Phoenix"}</title>
+        <title>{"Stock Phoenix"}</title>
         <meta
           name={pageData?.head?.meta.name}
           content={pageData?.head?.meta.content}
           key={pageData?.head?.meta.key}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5G6WR26B');
-          `,
-          }}
-        />
       </Head>
       <main className="font-inter bg-black h-full overflow-y-auto text-white pb-32 md:pt-6 ">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5G6WR26B"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
         <Modal
           className=" !z-40 sm:w-1/2"
           isOpen={isEnrollNowFormOpen}
@@ -202,7 +184,6 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
                 height={70}
                 className="max-sm:place-self-center"
               />
-
             </div>
             <h1
               className="max-md:text-4xl text-[45px] md:font-normal  leading-[60px] font-bold   "
@@ -258,7 +239,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
           </div>
         </div>
         <div className="flex flex-col gap-8 items-center justify-center">
-          <div className="flex flex-row max-md:flex-wrap items-center justify-center gap-6 max-md:gap-4 max-md:bg-[#061433] max-md:mx-2 max-md:py-2 rounded-lg mt-6">
+          <div className="flex flex-row max-md:flex-wrap items-center justify-center gap-6 max-md:gap-4  max-md:mx-2 max-md:py-2 rounded-lg mt-6">
             <div className="flex flex-col items-center justify-center bg-[#2563EB] text-white rounded-lg px-10 max-md:px-4 py-2 text-center bg-opacity-35 max-md:w-36 max-md:h-20">
               <p className="font-bold text-lg max-md:text-base">
                 {dayjs(activeSlot?.startDateTime).format("DD MMM YYYY")}
@@ -335,7 +316,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
             <p>Language - {pageData?.language}</p>
 
             <button
-              className="bg-[#2563EB] border-none !text-white py-3 w-[400px] max-xl:text-base max-xl:w-72 text-lg rounded-lg"
+              className="bg-[#2563EB] border-none !text-white py-3 w-[400px] max-xl:text-base max-xl:w-72 text-lg rounded-lg "
               onClick={() =>
                 handleEnrollNowFormOpen("paid_video_register_timer")
               }
@@ -365,7 +346,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
           </div>
 
           <div className="flex flex-row justify-center gap-16 max-md:flex-wrap max-xl:gap-4 max-lg:gap-2">
-            <div className="grid grid-cols-2 gap-16 max-xl:gap-4 max-lg:gap-2">
+            <div className="grid grid-cols-2 gap-16 max-xl:gap-4 max-lg:gap-2 w-full">
               <div className="border-dotted border-[#2563EB] border-2 flex flex-col justify-center items-center p-5 max-md:px-2 rounded-lg gap-2 w-full">
                 <img src="/paid-video/bonus1.svg"></img>
                 <h4 className="font-semibold">Bonus 1</h4>
@@ -383,7 +364,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-16 max-xl:gap-4 max-lg:gap-2 ">
+            <div className="grid grid-cols-2 gap-16 max-xl:gap-4 max-lg:gap-2 w-full">
               <div className="border-dotted border-[#2563EB] border-2 flex flex-col justify-center items-center p-5 max-md:px-2 rounded-lg gap-2 ">
                 <img src="/paid-video/bonus3.svg"></img>
                 <h4 className="font-semibold">Bonus 3</h4>
@@ -395,7 +376,9 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
               <div className="border-dotted border-[#2563EB] border-2 flex flex-col justify-center items-center p-5 max-md:px-2 rounded-lg gap-2 ">
                 <img src="/paid-video/bonus4.png"></img>
                 <h4 className="font-semibold">Bonus 4</h4>
-                <p className="max-sm:text-xs">Live Trading Support</p>
+                <p className="max-sm:text-xs text-center">
+                  Live Trading Support
+                </p>
                 <button className="bg-[#2563EB] !text-white rounded-full border-none max-sm:text-xs py-1 px-2">
                   Worth ₹10,000
                 </button>
@@ -596,7 +579,7 @@ export default function PaidVideo({ masterclass }: { masterclass: any }) {
             </button>
             <button
               onClick={() => handleEnrollNowFormOpen("paid_video_footer")}
-              className="bg-gradient-to-r from-[#2563EB] to-[#162D65] border-none md:py-3 block !text-white text-lg rounded-lg sm:hidden"
+              className="bg-gradient-to-r from-[#2563EB] to-[#162D65] border-none md:py-5 block !text-white text-lg rounded-lg sm:hidden px-5 py-3"
             >
               Register Now
             </button>
